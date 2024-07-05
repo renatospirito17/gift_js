@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo di Compleanno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="intro" class="page">
+        <h1>Benvenuta al tuo 18° Compleanno!</h1>
+        <p>Scopri il regalo speciale che ho preparato per te.</p>
+        <button onclick="goToPage('welcome')">Inizia il tuo viaggio</button>
+    </div>
+
+    <div id="welcome" class="page">
+        <h1>Scopri il tuo regalo</h1>
+        <p>Un'avventura ti aspetta, continua per scoprire di più.</p>
+        <button onclick="goToPage('info')">Continua</button>
+    </div>
+
+    <div id="info" class="page">
+        <h1>Un Viaggio Speciale</h1>
+        <p>Preparati per un'esperienza indimenticabile.</p>
+        <h2 class="airplane">✈️</h2>
+        <button onclick="goToPage('interactive')">Continua</button>
+    </div>
+
+    <div id="interactive" class="page">
+        <h1>Indovina la Destinazione</h1>
+        <p>Inserisci il nome della città per scoprire la destinazione del viaggio.</p>
+        <input type="text" id="guess" placeholder="Scrivi qui la tua risposta">
+        <button onclick="checkAnswer()">Invia</button>
+        <p id="message"></p>
+        <button id="proceed" onclick="goToPage('gift')" disabled>Prosegui verso la sorpresa</button>
+    </div>
+
+    <div id="gift" class="page">
+        <h1>Ecco Amsterdam!</h1>
+        <p>Ho prenotato un viaggio ad Amsterdam per il tuo compleanno! 🎉</p>
+        <img src="ticket.jpg" alt="Biglietto aereo">
+        <p>Non vedo l'ora di partire insieme a te.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
