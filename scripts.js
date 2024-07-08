@@ -4,6 +4,10 @@ function goToPage(pageId) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
     document.getElementById(pageId).classList.add('active');
+    
+    if (pageId === 'gift') {
+        startFallingLeaves();
+    }
 }
 
 document.getElementById('intro').classList.add('active');
@@ -30,5 +34,28 @@ function checkAnswer() {
             proceedButton.disabled = false;
             document.querySelector('#interactive button[onclick="checkAnswer()"]').disabled = true;
         }
+    }
+}
+
+function startFallingLeaves() {
+    const leafContainer = document.getElementById('falling-leaves');
+    const ballsContainer = document.getElementById('falling-balls');
+
+    const leafCount = 15;
+
+    for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement('div');
+        const balls = document.createElement('div');
+        leaf.classList.add('leaf');
+        balls.classList.add('balls');
+        leaf.textContent = '🍁';
+        balls.textContent = '🎁';
+        leaf.style.left = `${Math.random() * 100}%`;
+        balls.style.left = `${Math.random() * 100}%`;
+        leaf.style.animationDelay = `${Math.random() * 2}s`;
+        balls.style.animationDelay = `${Math.random() * 2}s`;
+        leafContainer.appendChild(leaf);
+        ballsContainer.appendChild(balls);
+
     }
 }
