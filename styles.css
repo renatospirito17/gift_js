@@ -28,7 +28,7 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     animation: slideIn 1s ease-out;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 p {
@@ -36,12 +36,12 @@ p {
     font-size: 1.2em;
     margin-bottom: 20px;
     animation: slideIn 1s ease-out;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 button {
-    background-color: #b39ddb;
-    color: white;
+    background-color: #ffffff;
+    color: #ff9a9e;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -49,10 +49,12 @@ button {
     margin-top: 20px;
     transition: background-color 0.3s, transform 0.3s;
     animation: slideIn 1s ease-out;
+    width: 70%;
 }
 
 button:hover {
-    background-color: #9575cd;
+    background-color: #ff9a9e;
+    color: white;
     transform: scale(1.05);
 }
 
@@ -77,6 +79,15 @@ input {
     margin-top: 20px;
     font-size: 1.2em;
     animation: slideIn 1s ease-out;
+    background-color: white;
+    color: black;
+    width: 65%;
+}
+
+input:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    outline: none;
 }
 
 #message {
@@ -84,6 +95,7 @@ input {
     margin-top: 20px;
     font-size: 1.2em;
     animation: fadeIn 1s forwards;
+    text-shadow: none;
 }
 
 .airplane {
